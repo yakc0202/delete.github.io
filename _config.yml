@@ -16,7 +16,7 @@ remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin    : "sunrise" # "default" , "air" , "dirt", "dark", "plum", "neon", "mint", "contrast", "aqua"
 
 # Site Settings
-locale                   : #"en-US"
+locale                   : "ko-KR"
 title                    : "Studying"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
