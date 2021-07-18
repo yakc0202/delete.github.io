@@ -13,7 +13,7 @@ remote_theme: mmistakes/minimal-mistakes
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "default" , "air" , "dirt", "sunrise", "plum", "neon", "mint", "contrast", "aqua"
+minimal_mistakes_skin    : "dirt" # "default" , "air" , "dark", "sunrise", "plum", "neon", "mint", "contrast", "aqua"
 
 # Site Settings
 locale                   : "ko-KR"
