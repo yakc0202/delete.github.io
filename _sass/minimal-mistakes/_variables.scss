@@ -6,21 +6,20 @@
    Typography
    ========================================================================== */
 
-$doc-font-size: 12 !default;
+$doc-font-size: 11 !default;
 
 /* paragraph indention */
 $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
 /* system typefaces */
-$serif: "Coming Soon", Georgia, Times, serif !default;
-$sans-serif: "Iropke Batang", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+$serif: Georgia, Times, serif !default;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
-$monospace: "Nanum Gothic Coding", Monaco, Consolas, "Lucida Console", monospace !default;
-$cute: "Cafe24Oneprettynight" !default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 /* sans serif typefaces */
-$sans-serif-narrow: $cute !default;
+$sans-serif-narrow: $sans-serif !default;
 $helvetica: Helvetica, "Helvetica Neue", Arial, sans-serif !default;
 
 /* serif typefaces */
@@ -30,9 +29,9 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $cute !default;
-$header-font-family: $cute !default;
-$caption-font-family: $cute !default;
+$global-font-family: $sans-serif !default;
+$header-font-family: $sans-serif !default;
+$caption-font-family: $sans-serif !default;
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px
