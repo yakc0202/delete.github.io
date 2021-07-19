@@ -102,9 +102,9 @@ analytics:
 
 # Site Author
 author:
-  name             : <span style="font-family: 'CookieRun-Regular';">"Studying"</style> #"공부하는 "
+  name             : <span style="font-family: 'CookieRun-Regular';">Studying</style> #"공부하는 "
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : <span style="font-family: 'CookieRun-Regular';">"공부한 것 업로드"</style> #"대학생."
+  bio              : <span style="font-family: 'CookieRun-Regular';">공부한 것 업로드</style> #"대학생."
   location         : # "Korea"
   email            :
   links:
