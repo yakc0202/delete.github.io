@@ -205,7 +205,7 @@ body {
     }
 
     .page__title {
-      font-family: $cookierun
+      font-family: $cookierun;
       font-size: $type-size-2;
 
       @include breakpoint($small) {
