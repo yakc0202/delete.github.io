@@ -102,6 +102,7 @@ analytics:
 
 # Site Author
 author:
+  google_fonts     : "CookieRun-Regular"
   name             : "공부하는 "
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "대학생."
