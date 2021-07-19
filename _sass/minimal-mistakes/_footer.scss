@@ -7,8 +7,8 @@
   float: left;
   margin-left: 0;
   margin-right: 0;
-  width: 20%;
-  margin-top: 3em;
+  width: 100%;
+  margin-top: 1em; #3em
   color: $muted-text-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -20,7 +20,7 @@
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
+    margin-top: 1em; #2em
     max-width: 10%;
     padding: 0 1em 2em;
 
