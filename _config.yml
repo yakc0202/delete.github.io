@@ -104,13 +104,13 @@ analytics:
 author:
   name             : "공부하는 "
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "대학생."
+  bio              : "대학생"
   location         : # "Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "yakc0202@gmail.com"
+      url: "mailto: yakc0202@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -203,7 +203,7 @@ kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..6
+  toc_levels: 1..10
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
