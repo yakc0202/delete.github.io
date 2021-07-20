@@ -1,7 +1,7 @@
 ---
 title: "Pandas"
 layout: archive
-permalink: categories/pandas
+permalink: categories/Pandas
 author_profile: true
 sidebar_main: true
 ---
