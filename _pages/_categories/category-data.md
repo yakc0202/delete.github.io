@@ -1,7 +1,7 @@
 ---
 title: "데이터 청년 캠퍼스"
 layout: archive
-permalink: categories/data
+permalink: categories/data/pandas
 author_profile: true
 sidebar_main: true
 ---
