@@ -1,7 +1,13 @@
 ---
 title: "DataFrame"
 date: 2021-07-19 -0400
-categories: data Pandas
+categories: 
+ - Pandas
+tags: 
+ - [데이터 청년 캠퍼스, Pandas]
+
+toc: true
+
 ---
 ## DataFrame 생성하고 데이터 할당  
 
