@@ -108,7 +108,7 @@ author:
   location         : # "Korea"
   email            :
   links:
-    - label: "Gmail"
+    - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url:  mailto:yakc0202@gmail.com
     - label: "Website"
