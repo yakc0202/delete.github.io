@@ -284,9 +284,11 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
+      show_date: true
       comments: true
       share: false
       related: true
       mathjax: true
       sidebar_main: true
+      show_categories: true
+      show_tag: true
