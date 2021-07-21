@@ -1,6 +1,7 @@
 <!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
 
 {% assign sum = site.posts | size %}
+
 <nav class="nav__list">
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
@@ -11,7 +12,7 @@
       </li>
       <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
-        <span class="nav__sub-title"><span style="font-family: 'IM_Hyemin-Bold';">데이터 청년 캠퍼스</style></span>
+        <span style="font-family: 'IM_Hyemin-Bold';"><span class="nav__sub-title">데이터 청년 캠퍼스</span></style>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
                 <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
