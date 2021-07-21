@@ -250,7 +250,7 @@ whitelist:
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
-  path: /categories/
+  path: categories/
 tag_archive:
   type: liquid
   path: /tags/
@@ -290,5 +290,3 @@ defaults:
       related: true
       mathjax: true
       sidebar_main: true
-      show_categories: true
-      show_tag: true
