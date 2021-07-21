@@ -19,7 +19,7 @@
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "Pandas" %}
-                        <li><a href="/categories/pandas" class=""><span style="font-family: 'IM_Hyemin-Bold';">PANDAS ({{category[1].size}})</style></a></li>
+                        <li><span style="font-family: 'IM_Hyemin-Bold';"><a href="/categories/pandas" class="">PANDAS ({{category[1].size}})</a></style></li>
                     {% endif %}
                 {% endfor %}
               
