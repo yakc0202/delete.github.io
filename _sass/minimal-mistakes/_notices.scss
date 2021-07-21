@@ -54,7 +54,10 @@
   }
 
   code {
-    background-color: mix($background-color, $notice-color, $code-notice-background-mix)
+    background-color: mix($background-color, $notice-color, $code-notice-background-mix);
+	  /* 7.21 22:38 수정 */
+    font-size: $type-size-5;
+	    
   }
 
 	pre code {
