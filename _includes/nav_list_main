@@ -9,26 +9,26 @@
       <li>
         <span style="font-family: 'IM_Hyemin-Bold';">📂전체 글 수 {{sum}} 개 </style></i>
       </li>
-      <li><span style="font-family: 'IM_Hyemin-Bold';">
+      <li>
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
-        <span class="nav__sub-title">데이터 청년 캠퍼스</span>
+        <span class="nav__sub-title"><span style="font-family: 'IM_Hyemin-Bold';">데이터 청년 캠퍼스</style></span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
             <ul>
                 <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
                 {% for category in site.categories %}
                     {% if category[0] == "Pandas" %}
-                        <li><a href="/categories/pandas" class="">PANDAS ({{category[1].size}})</a></li>
+                        <li><a href="/categories/pandas" class=""><span style="font-family: 'IM_Hyemin-Bold';">PANDAS ({{category[1].size}})</style></a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Regression" %}
-                        <li><a href="/categories/regression" class="">회귀분석 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/regression" class=""><span style="font-family: 'IM_Hyemin-Bold';">회귀분석 ({{category[1].size}})</style></a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
-      </style></li>
+      </li>
   </ul>
 </nav>
