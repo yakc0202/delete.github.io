@@ -192,7 +192,25 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+# 여기서 부터 고침
+---
+excerpt_separator: <!--more-->
+---
+
+Excerpt with multiple paragraphs
+
+Here's another paragraph in the excerpt.
+<!--more-->
+Out-of-excerpt
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
+# 
 incremental: false
 
 
