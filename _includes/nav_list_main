@@ -9,7 +9,7 @@
       <li>
         <span style="font-family: 'IM_Hyemin-Bold';">📂전체 글 수 {{sum}} 개 </style></i>
       </li>
-      <li>
+      <li><span style="font-family: 'IM_Hyemin-Bold';">
         <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
         <span class="nav__sub-title">데이터 청년 캠퍼스</span>
             <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
@@ -29,6 +29,6 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-      </li>
+      </style></li>
   </ul>
 </nav>
