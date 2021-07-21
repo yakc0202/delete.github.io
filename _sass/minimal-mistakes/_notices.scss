@@ -55,13 +55,15 @@
 
   code {
     background-color: mix($background-color, $notice-color, $code-notice-background-mix);
-	  /* 7.21 22:38 수정 */
-    font-size: $type-size-5;
+	  /* 7.21 22:48 수정 */
+    font-size: $14px;
 	    
   }
 
 	pre code {
 		background-color: inherit;
+		/* 7.21 22:48 수정 */
+		font-size: inherit;
 	}
 
   ul {
