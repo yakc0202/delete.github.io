@@ -1,6 +1,6 @@
 ---
 title: "DataFrame 실습"
-date: 2021-07-20 -0400
+date: 2021-07-20
 categories: 
  - Pandas
 tags: 
