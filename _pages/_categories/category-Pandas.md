@@ -1,6 +1,6 @@
 ---
 title: "Pandas"
-layout: archive
+layout: liquid
 permalink: categories/pandas
 author_profile: true
 sidebar_main: true
