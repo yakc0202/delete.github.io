@@ -1,7 +1,7 @@
 ---
 title: "회귀분석"
 layout: archive
-permalink: categories/regression
+permalink: categories/regression/
 author_profile: true
 sidebar_main: true
 ---
