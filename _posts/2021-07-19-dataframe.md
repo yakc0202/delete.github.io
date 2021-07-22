@@ -1,11 +1,13 @@
 ---
 title: "DataFrame"
-date: 2021-07-19
-categories: 
+
+categories:
  - Pandas
 
-tags: 
+tags:
  - [데이터 청년 캠퍼스, Pandas]
+
+date: 2021-07-19
 
 toc: true
 
