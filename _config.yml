@@ -102,7 +102,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "공부하는 "
+  name             : "공부하는"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "대학생"
   location         : # "Korea"
@@ -122,7 +122,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/yakc0202/yakc0202.github.io"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -154,6 +154,8 @@ footer:
 include:
   - .htaccess
   - _pages
+  # 7.22 21:55 수정
+  - _includes
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -215,7 +217,8 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
+# 07.22 22:55 수정
+permalink: categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -250,7 +253,8 @@ whitelist:
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
-  path: /categories/
+  # 7.22 21:55 수정
+  path: categories/
 tag_archive:
   type: liquid
   path: /tags/
