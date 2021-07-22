@@ -27,7 +27,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Regression" %}
-                        <li><span style="font-family: 'IM_Hyemin-Bold';"><a href="/categories/regression" class="">회귀분석 ({{category[1].size}})</a></span></li>
+                        <li><span style="font-family: 'IM_Hyemin-Bold';"><a href="categories/regression" class="">회귀분석 ({{category[1].size}})</a></span></li>
                     {% endif %}
                 {% endfor %}
           </ul>
