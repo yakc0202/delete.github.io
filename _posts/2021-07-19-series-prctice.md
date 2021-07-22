@@ -1,6 +1,6 @@
 ---
 title: "Series 실습"
-date: 2021-07-19 -0400
+date: 2021-07-19
 categories: 
 - Pandas
 tags:
