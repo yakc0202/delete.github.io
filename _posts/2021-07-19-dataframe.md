@@ -1,8 +1,9 @@
 ---
 title: "DataFrame"
-date: 2021-07-19 -0400
+date: 2021-07-19
 categories: 
  - Pandas
+
 tags: 
  - [데이터 청년 캠퍼스, Pandas]
 
