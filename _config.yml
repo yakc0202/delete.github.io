@@ -154,8 +154,6 @@ footer:
 include:
   - .htaccess
   - _pages
-  # 7.23 09:34 수정
-  - nav_list_main
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -292,5 +290,5 @@ defaults:
       related: true
       mathjax: true
       sidebar:
-          nav: "nav_list_main"
+          nav: "doc"
       sidebar_main: true
