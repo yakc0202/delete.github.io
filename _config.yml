@@ -292,5 +292,5 @@ defaults:
       related: true
       mathjax: true
       sidebar:
-          nav: nav_list_main
+          nav: "nav_list_main"
       sidebar_main: true
