@@ -2,7 +2,7 @@
 main:
   - title: "Home"
     url: https://yakc0202.github.io
-   - title: "Category"
+  - title: "Category"
      url: /categories/
   # - title: "Sample Posts"
   #   url: /year-archive/
