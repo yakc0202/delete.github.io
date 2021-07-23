@@ -154,8 +154,8 @@ footer:
 include:
   - .htaccess
   - _pages
-  # 7.22 21:55 수정
-  - _includes
+  # 7.23 09:34 수정
+  - nav_list_main
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
