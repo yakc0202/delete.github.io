@@ -14,9 +14,9 @@ docs:
   - title: Data Campus
     children:
       - title: "Pandas"
-        url: /categories/pandas
+        url: categories/pandas
       - title: "Regression"
-        url: /categories/regression
+        url: categories/regression
       #- title: "Installation"
        # url: /docs/installation/
      # - title: "Upgrading"
