@@ -1,0 +1,181 @@
+---
+title: "규제가 있는 선형 회귀"
+date: 2021-07-27
+
+categories:
+ - Regression
+
+tags:
+ - [데이터 청년 캠퍼스, Regression]
+
+toc: true
+---
+# 데이터 수집 및 데이터 프레임 변환  
+```py
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.datasets import loas_diabetes
+
+diab = load_diabetes()
+diab_df = pd.DataFrame(diab.data, columns = diab.feature_names)
+diab_df['measure'] = diab.target
+
+sns.set_style('whitegrid')
+f = sns.distplot(diab_df['measure'])
+```  
+
+# 데이터 분할  
+```py
+from sklearn.model_selection import train_test_split
+
+X = diab_df.drop(['measure'], axis=1)
+y = diab_df['measure']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+```  
+# 각 모델별 비교를 위한 빈 데이터 프레임
+```py
+comp_df = pd.DataFrame(index=(diab.feature_names) + ["score"])
+```  
+
+## 규제가 없는 선형 모델  
+```py
+from sklearn.linear_model import LinearRegression
+```  
+
+### 모델 구축 및 학습  
+```py
+model_LR = LinearRegression()
+model_LR.fit(X_train, y_train)
+```  
+
+### 모델 평가  
+```py
+y_pred = model_LR.predict(X_test)
+r2 = r2_score(y_test, y_pred)
+```  
+
+### 회귀 계수 확인  
+```py
+coef = pd.Series(model_LR.coef_, index = X_test.columns)
+
+print("R2: {:.3f}\n".format(r2))
+print(coef)
+```  
+
+### 계수값 시각화  
+```py
+coef = pd.Series(data  = np.abs(model_LR.coef_), index = X_test.columns).sort_values(ascending = False)
+
+plt.figure(figsize = (10, 3))
+plt.title('Fearue importance of coefficients without Regularization', fontsize = 15)
+plt.bar(coef.index, coef.values, align = 'center')
+plt.xticks(coef.index, rotation = 30, fontsize = 11)
+plt.show()
+```  
+
+### 모델별 비교 데이터 프레임 열 추가  
+```py
+comp_df['LR'] = np.append(model_LR.coef_, r2)
+```  
+
+## Ridge 모델
+```py
+from sklearn.linear_model import Ridge
+from sklearn.metrics import mean_squared_error, r2_score
+```  
+
+### alpha=1일때 모델 구축 및 학습  
+```py
+model_Ridge1 = Ridge(alpha=1)
+model_Ridge1.fit(X_train, y_train)
+```  
+
+### 모델 평가  
+```py
+y_pred = model_Ridge1.predict(X_test)
+r2 = r2_score(y_test, y_pred)
+```  
+
+### 회귀계수 확인  
+```py
+coef = pd.Series(model_Ridge1.coef_, index = X_test.columns)
+
+print("R2: {:.3f}\n".format(r2))
+print(coef)
+```  
+
+### 계수값 시각화  
+```py
+coef = pd.Series(data = np.abs(model_Ridge1.coef_), index = X_test.columns).sort_values(ascending = False)
+
+plt.figure(figsize = (10,3))
+plt.title('Feature importance of coefficients in Ridege(alpha=1)')
+plt.bar(coef.index, rotation = 30, fontsize = 11)
+plt.xticks(coef.index, rptation = 30, fontsize = 11)
+plt.show()
+```  
+#### alpha=[0.01, 1, 10, 100]인 경우
+```py
+alpha_list = [0.01, 1, 10, 100]
+for alpha in alpha_list:
+    model_Ridge = Ridge(alpha = alpha)
+    model_Ridge.fit(X_train, y_train)
+    y_pred = model_Ridge.predict(X_test)
+    r2 = r2_score(y_test, y_pred)
+    
+    col_name = 'Ridge(alpha={:.2f})'.format(alpha)
+    comp_df[col_name] = np.append(model_Ridge.coef_, r2)
+```  
+
+## Lasso 모델  
+```py
+from sklearn.linear_model import Lasso
+```  
+
+### alpha=1일때 모델 구축 및 학습 
+```py
+model_Lasso1 = Lasso(alpha=1)
+model_Lasso1.fit(X_train, y_train)
+```  
+
+### 모델 평가  
+```py
+y_pred = model_Lasso1.predict(X_test)
+r2 = r2_score(y_test, y_pred)
+```  
+
+### 회귀 계수 확인  
+```py
+coef = pd.Series(model_Lasso1.coef_, index = X_test.columns)
+
+print("R2: {:.3f}\n".format(r2))
+print(coef)
+```  
+
+### 계수 시각화  
+```py
+coef = pd.Series(data = np.abs(model_Lasso1.coef_), index = X_test.columns).sort_values(ascendong = False)
+
+plt.figure(figsize = (10, 3))
+plt.title('Feature importance of coefficients in Lasso(alpha=1)')
+plt.bar(coef.index, coef.values, align='center')
+plt.xticks(coef.index, rotation = 30, fontsize = 11)
+plt.show()
+```  
+
+#### alpha=[0.01, 1, 10, 100]인 경우  
+```py
+alpha_list = [0.01, 1, 10, 100]
+for alpha in alpha_list:
+    model_Lasso = Lasso(alpha = alpha)
+    model_Lasso.fit(X_train, y_train)
+    y_pred = model_Lasso.predict(X_test)
+    r2 = r2_score(y_test, y_pred)
+    
+    col_name = 'Lasso(alpha={:.2f})'.format(alpha)
+    comp_df[col_name] = np.append(model_Lasso.coef_, r2)
+```  
